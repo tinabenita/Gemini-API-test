@@ -42,5 +42,37 @@ async function run(){
 run()*/
 
 
-//Chat Bot gemini-pro
- 
+//Chat gemini-pro
+/*async function run(){
+    const model= genAI.getGenerativeModel({model: "gemini-pro"}); 
+    const chat= model.startChat({
+        history: [
+            {
+                role: "user",
+                parts: "Hello, I have 17 cats in my house."
+            },
+            {
+                role: "model",
+                parts: "Nice to meet you. What would you like to know?"
+            }
+        ]
+    })
+
+    const msg= "How many paws are in my house?"
+    const result= await chat.sendMessage(msg)
+    const response= await result.response
+    const text= response.text()
+    console.log(text)
+}
+run()*/
+
+
+//Text to Embedding(used to represent information as a list of floating point numbers in an array)
+/*async function run(){
+    const model= genAI.getGenerativeModel({model: "embedding-001"})
+    const text= "The quick brown fox jumped over the lazy helipcopter"
+    const result= await model.embedContent(text)
+    const embedding= result.embedding
+    console.log(embedding)
+}
+run()*/
