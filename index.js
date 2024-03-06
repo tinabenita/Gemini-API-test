@@ -19,7 +19,7 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 run(); */
 
 //Text,Image to Text
-function filetoGenerativePart(path, mimeType){
+/*function filetoGenerativePart(path, mimeType){
     return{
         inlineData: {
             data: Buffer.from(fs.readFileSync(path)).toString('base64'),
@@ -31,6 +31,16 @@ async function run(){
     const model= genAI.getGenerativeModel({model: "gemini-pro-vision"});
     const prompt= "What's different between these pictures?"
     const imageParts= [
-        filetoGenerativePart("")
+        filetoGenerativePart("bruh.jpg", "image/jpeg"),
+        filetoGenerativePart("huh.jpg", "image/jpeg"),
     ]
+    const result= await model.generateContent([prompt, ...imageParts])
+    const response= await result.response
+    const text= response.text()
+    console.log(text)
 }
+run()*/
+
+
+//Chat Bot gemini-pro
+ 
